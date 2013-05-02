@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <com.android.settings.vetnote.CustomDpiGroupPreference
+            android:key="customdpigroup"
+            android:title="@string/customdpigroup"
+            android:summary="@string/customdpigroup_summary"
+            android:dialogTitle="@string/customdpigroup" />
+
+    <Preference
+        android:key="dpi_groups_restore_default"
+        android:title="@string/dpi_groups_restore_default_title"
+        android:summary="@string/dpi_groups_restore_default_summary" />
+
+    <PreferenceCategory
+        android:key="dpi_groups_category"
+        android:title="@string/dpi_groups_title">
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/dpi_groups_backuprestore_title">
+
+<CheckBoxPreference
+            android:key="dpi_groups_auto_backup"
+            android:title="@string/dpi_groups_auto_backup"
+            android:summary="@string/dpi_groups_auto_backup_summary"
+            android:defaultValue="false" />
+
+        <Preference
+            android:key="dpi_groups_backup"
+            android:title="@string/dpi_groups_backup_title"
+            android:summary="@string/dpi_groups_backup_summary" />
+
+        <Preference
+            android:key="dpi_groups_restore"
+            android:title="@string/dpi_groups_restore_title"
+            android:summary="@string/dpi_groups_restore_summary" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
+
+

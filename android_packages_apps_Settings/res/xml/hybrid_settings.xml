@@ -1,0 +1,56 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+        android:title="@string/hybrid_settings_title"
+        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <PreferenceCategory
+        android:key="ui"
+        android:title="@string/hybrid_settings_title">
+
+        <ListPreference
+            android:key="ui_mode"
+            android:entries="@array/uimode_entries"
+            android:entryValues="@array/uimode_values"
+            android:title="@string/uimode_title" />
+
+        <PreferenceScreen
+            android:key="system_dpi"
+            android:fragment="com.android.settings.vetnote.DpiPreferences"
+            android:title="@string/system_dpi_title"
+            android:summary="@string/system_dpi_summary" />
+
+       <PreferenceScreen
+            android:key="dpi_groups"
+            android:fragment="com.android.settings.vetnote.DpiGroups"
+            android:title="@string/dpi_groups_title"
+            android:summary="@string/dpi_groups_summary" />
+
+	<Preference
+            android:key="navbar_height"
+            android:title="@string/navbar_height_title"
+            android:summary="@string/navbar_height_summary" />
+
+
+       </PreferenceCategory>
+
+ <PreferenceCategory
+        android:title="@string/dpi_groups_backuprestore_title">
+
+        <CheckBoxPreference
+            android:key="dpi_groups_auto_backup"
+            android:title="@string/dpi_groups_auto_backup"
+            android:summary="@string/dpi_groups_auto_backup_summary"
+            android:defaultValue="false" />
+
+        <Preference
+            android:key="dpi_groups_backup"
+            android:title="@string/dpi_groups_backup_title"
+            android:summary="@string/dpi_groups_backup_summary" />
+
+        <Preference
+            android:key="dpi_groups_restore"
+            android:title="@string/dpi_groups_restore_title"
+            android:summary="@string/dpi_groups_restore_summary" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
